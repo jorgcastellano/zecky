@@ -1,0 +1,28 @@
+# The .htaccess file uses the GeoIP Module for Apache to detect the location of the IP, on each request.
+# If the rewrite condition detects the location to be France, then the request gets redirected to a no-access
+# directory under the http://alcapone-us.com site.
+#GeoIPEnable On
+# SetEnvIf GEOIP_COUNTRY_CODE FR BlockCountry
+# Deny from env=BlockCountry
+
+#<IfModule mod_rewrite.c>
+#	RewriteEngine on
+#	RewriteCond %{ENV:GEOIP_COUNTRY_CODE} ^FR$
+#	RewriteRule ^(.*)$ http://alcapone-us.com/no-access/ [R,L]
+#</IfModule>
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+
+Redirect 301 /events_old/ /eventpromotions/
+Redirect 301 /events/ /eventpromotions/
+</IfModule>
+
+# END WordPress
+
