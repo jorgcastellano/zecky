@@ -44,37 +44,37 @@ if($_POST) {
 
        if(!isset($error)) {
             // if we have no validation errors prepare mail
-            $mail = new PHPMailer;
-            $mail->isSMTP();
-            $mail->SMTPDebug = 0;
-            $mail->Debugoutput = 'html';
+            $mail = new PHPMailer();
+            //$mail->isSMTP();
+            //$mail->SMTPDebug = 0;
+            //$mail->Debugoutput = 'html';
 
             //Set the hostname of the mail server gmail - yandex- outlook or your hosting's
-            $mail->Host = "smtp.gmail.com"; // <------------ change with your host name
+            //$mail->Host = "smtp.gmail.com"; // <------------ change with your host name
             // use
             // $mail->Host = gethostbyname('smtp.gmail.com');
             // if your network does not support SMTP over IPv6
 
             //Set the SMTP port number - 587 for authenticated TLS, a.k.a. RFC4409 SMTP submission
-            $mail->Port = 465; // <------------ Change with port 25 - 465 - 587 and etc..
+            //$mail->Port = 465; // <------------ Change with port 25 - 465 - 587 and etc..
 
             //Set the encryption system to use - ssl (deprecated) or tls
-            $mail->SMTPSecure = 'ssl'; // <------------ tls (port 587) or ssl (port 465)
+            //$mail->SMTPSecure = 'ssl'; // <------------ tls (port 587) or ssl (port 465)
 
             //Whether to use SMTP authentication
-            $mail->SMTPAuth = true;
+            //$mail->SMTPAuth = false;
 
             //Username to use for SMTP authentication - use full email address for gmail
-            $mail->Username = "YOUR_USERNAME_HERE"; // <------------ Smtp authentication - username here
+            //$mail->Username = "YOUR_USERNAME_HERE"; // <------------ Smtp authentication - username here
 
             //Password to use for SMTP authentication
-            $mail->Password = "YOUR_PASSWORD_HERE"; // <------------ Smtp authentication -password here
+            //$mail->Password = "YOUR_PASSWORD_HERE"; // <------------ Smtp authentication -password here
 
             $mail->setFrom($email, $name);
-            $mail->AddReplyTo($email,$name);
+            $mail->AddReplyTo($email, $name);
 
             //Set who the message is to be sent to --- CHANGE THIS EMAIL ADDDRES WITH THE ONE YOU WANT TO RECEIVE EMAILS AND WWIT YOUR NAME
-            $mail->addAddress('EMAIL_ADDRESS_YOU_WANTTO_RECEIVE_MESSAGES', 'YOUR_NAME'); // <----------- CHANGE YOUR WITH YOUR EMAIL ADDRES
+            $mail->addAddress('arqzeckydc@gmail.com', 'Zecky Da Costa'); // <----------- CHANGE YOUR WITH YOUR EMAIL ADDRES
 
             $mail->Subject = $subject;
             $mail->msgHTML($message);
