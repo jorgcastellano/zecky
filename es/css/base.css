@@ -26,6 +26,14 @@ footer {
 	outline: none;
 	display: inline-block;
 }
+.logos-services {
+	width: 50px;
+	height: auto;
+}
+.service-title {
+    font-size: 15px;
+    line-height: 1.4;
+}
 ul.list-inline {
 	margin-bottom:30px;
 	margin-top:0;
