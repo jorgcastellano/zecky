@@ -61,3 +61,14 @@ ul.social-buttons li a {
 ul.social-buttons li a:hover, ul.social-buttons li a:focus, ul.social-buttons li a:active {
 	background-color:#B2CA00;
 }
+@media (max-width: 1400px) {
+	#adhoc-caption-services {
+		margin-top: 200px !important;
+	}
+	#adhoc-caption-partners {
+		margin-top: 250px !important;
+	}
+	#adhoc-caption-projects, #adhoc-caption-contact {
+		margin-top: 220px !important;
+	}
+}
