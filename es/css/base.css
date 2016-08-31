@@ -72,9 +72,6 @@ ul.social-buttons li a:hover, ul.social-buttons li a:focus, ul.social-buttons li
 		margin-top: 220px !important;
 	}
 }
-.index-bg {
-	background-color: white !important;
-}
 @media (max-width: 1199px) {
 	ul.navbar-nav {
 		left: -40px;
