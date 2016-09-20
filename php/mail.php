@@ -74,7 +74,7 @@ if($_POST) {
             $mail->AddReplyTo($email, $name);
 
             //Set who the message is to be sent to --- CHANGE THIS EMAIL ADDDRES WITH THE ONE YOU WANT TO RECEIVE EMAILS AND WWIT YOUR NAME
-            $mail->addAddress('arqzeckydc@gmail.com', 'Zecky Da Costa'); // <----------- CHANGE YOUR WITH YOUR EMAIL ADDRES
+            $mail->addAddress('projects@arqzeckydc.com', 'Zecky Da Costa'); // <----------- CHANGE YOUR WITH YOUR EMAIL ADDRES
 
             $mail->Subject = $subject;
             $mail->msgHTML($message);

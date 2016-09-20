@@ -10678,6 +10678,7 @@ Animations - add these clases to the parent element - Navbar Or dropdown
 
 	-webkit-animation-name: bottomToTop;
 
+	width: 235px;
 }
 
 
